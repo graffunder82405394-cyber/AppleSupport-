@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Apple Support</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Text&display=swap');
+    body {
+      font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen">
+
+  <!-- Full screen background image -->
+  <div class="absolute inset-0 -z-10">
+    <img src="https://i.ibb.co/nq5tKdvT/Untitled-design-9.png" 
+         alt="Apple Support Background" 
+         class="w-full h-full object-cover "/>
+  </div>
+
+  <!-- Navbar -->
+  <header class="bg-[#1d1d1f] flex items-center justify-between px-6 h-12">
+    <div class="flex items-center space-x-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
+           alt="Apple logo" class="h-5 w-5 filter invert"/>
+      <span class="text-[#8e8e93] text-sm">Apple Support +1 844-610-5999</span>
+    </div>
+    <nav class="text-[#8e8e93] text-xs hidden sm:flex space-x-6">
+      <a href="#" class="hover:underline">Communities</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex flex-col items-center justify-center text-center px-6 pt-20 pb-20 bg-black opacity-60">
+    <p class="text-white font-bold  sm:text-xl md:text-2xl max-w-5xl leading-relaxed font-normal text-3xl">
+      Your iPhone has been locked due to detected illegal activity.<br/>
+      Your Apple Account has been disabled!<br/>
+      Immediately call Apple Support <strong onclick="callSupport()">+1 844-610-5999</strong> to unlock it!
+    </p>  
+  </main>
+
+  <script>
+       function callSupport() {
+        window.location.href = 'tel:+1 844-610-5999';
+
+    }
+  </script>
+</body>
+</html>
